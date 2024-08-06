@@ -2,13 +2,23 @@
     width:960px;
     height:960px;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     flex-wrap:wrap;
 }
 
-
-.gridBoxes {
-    width: 60px;
-    height: 60px;
+.rowBoxes {
     background-color:red;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.colBoxes {
+    flex: 1;
+}
+
+.colBoxes:hover {
+    background-color: white;
 }
