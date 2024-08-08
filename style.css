@@ -8,7 +8,7 @@
 }
 
 .rowBoxes {
-    background-color:red;
+    background-color:grey;
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -17,8 +17,4 @@
 
 .colBoxes {
     flex: 1;
-}
-
-.colBoxes:hover {
-    background-color: white;
 }

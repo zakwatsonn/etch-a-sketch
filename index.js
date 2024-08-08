@@ -1,9 +1,12 @@
 const container = document.querySelector('.container')
 
 function createGrid(sizeOfGrid) {
+    if (sizeOfGrid > 100) {
+        error('Please choose a maximum of 100 pixels for the width of the grid')
+    } 
+
    for (let i = 0; i < sizeOfGrid; i++) {
-     let rowBoxes
-     rowBoxes = document.createElement('div')
+     let rowBoxes = document.createElement('div')
      rowBoxes.classList.add('rowBoxes')
      container.append(rowBoxes)
      for (let j = 0; j < sizeOfGrid; j++) {
@@ -14,8 +17,18 @@ function createGrid(sizeOfGrid) {
     } 
 }
 
-
 //prompting to get the size of the grid
 createGrid(prompt('Give the width of the grid in squares.'))
+
+//adding event listeners for the hover effect
+const listenerNodes = document.querySelectorAll('.colBoxes')
+listenerNodes.forEach((currentNode) => {
+    currentNode.addEventListener('mouseenter', () => {
+        currentNode.style.backgroundColor = 'lightblue'
+    })
+    currentNode.addEventListener('mouseleave', () => {
+        currentNode.style.backgroundColor = 'grey'
+    })
+})
 
 
