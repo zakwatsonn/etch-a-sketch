@@ -26,7 +26,12 @@ listenerNodes.forEach((currentNode) => {
     currentNode.addEventListener('mouseenter', () => {
         currentNode.style.backgroundColor = 'lightblue'
     })
-    currentNode.addEventListener('mouseleave', () => {
+})
+
+//adding functionality for the reset button
+const resetButton = document.querySelector('#resetButton')
+resetButton.addEventListener('click', () => {
+    listenerNodes.forEach((currentNode) => {
         currentNode.style.backgroundColor = 'grey'
     })
 })
